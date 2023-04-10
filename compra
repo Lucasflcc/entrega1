@@ -1,0 +1,34 @@
+public class Compra {
+    private Usuario usuario;
+
+    public Compra(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+	public static double bilhete(Filme filme, int quantidade) {
+    	double valor = filme.getValor();
+    	double total = valor*quantidade;
+    	return total;
+    }
+
+	public static double pipoca(int quantidade) {
+		double valor = 7.00;
+		double total = valor*quantidade;
+		return total;
+	}
+	
+    public static double refrigerante(int quantidade) {
+    	double valor = 5.00;
+    	double total = valor*quantidade;
+    	return total;
+	}
+	
+}
