@@ -1,3 +1,5 @@
+package atividade1;
+
 import java.util.Scanner;
 
 public class Main {
@@ -9,7 +11,7 @@ public class Main {
 	 }
 	 
     public static void main(String[] args) {
-        Usuario u = new Usuario("usuario", "cpf", "senha", 34, "sexo", "usuario@mail.com", "cartao", "numcartao", "codcartao");
+        //Usuario u = new Usuario("usuario", "cpf", "senha", 34, "sexo", "usuario@mail.com", "cartao", "numcartao", "codcartao");
         Filme f = new Filme("nome", 2, "sinopse", 10.00);
         Filme f2 = new Filme("name", 3, "sinopsis", 20.00);
         Sessao se = new Sessao(f);
@@ -21,14 +23,41 @@ public class Main {
         
         
         int loop = 0;
+        
         Scanner input = new Scanner(System.in);
-        while(loop==0) {
+        
+        while(loop == 0) {
+        System.out.println("digite seu nome, cpf, senha, sexo, email, cartão, numero do cartão e código do cartão, idade" + " nessa ordem");
+        System.out.println("nome-");
+        String nome = input.nextLine();
+        System.out.println("cpf-");
+        String cpf = input.nextLine();
+        System.out.println("senha-");
+        String senha = input.nextLine();
+        System.out.println("sexo-");
+        String sexo = input.nextLine();
+        System.out.println("email-");
+        String email = input.nextLine();
+        System.out.println("cartao-");
+        String cartao = input.nextLine();
+        System.out.println("número do cartão-");
+        String numcartao = input.nextLine();
+        System.out.println("código do cartão-");
+        String codcartao = input.nextLine();
+        System.out.println("idade-");
+        int idade = input.nextInt();
+        Usuario user = new Usuario(nome, cpf, senha, idade, sexo, email, cartao, numcartao, codcartao);
+        
+        int loop1 = 0;
+        
+        while(loop1==0) {
         	System.out.println("escolha a função a ser executada");
         	System.out.println("1- comprar produtos");
         	System.out.println("2- ver seções disponíveis");
         	System.out.println("3- ver cadeiras disponíveis em uma seção");
         	System.out.println("4- selecionar cadeiras a serem compradas");
-        	System.out.println("5- concluir compras");
+        	System.out.println("5- concluir compras e sair do usuario");
+        	System.out.println("6- concluir compras e encerrar programa");
         	
         	String escolha = input.nextLine();
         	switch (escolha) {
@@ -41,17 +70,24 @@ public class Main {
         		int bil = input.nextInt();
         		System.out.println("pipoca");
         		int pip = input.nextInt();
+        		System.out.println("chocolate");
+        		int choc = input.nextInt();
         		System.out.println("refrigerante");
         		int ref = input.nextInt();
+        		System.out.println("suco");
+        		int suco = input.nextInt();
+        		System.out.println("agua");
+        		int agua = input.nextInt();
+        		
         		
         		if(film == 1) {
-        		    total= Compra.bilhete(f, bil)+Compra.pipoca(pip)+ Compra.refrigerante(ref);
+        		    total= Compra.bilhete(f, bil)+(Produtos.pipoca.getPreço()*pip)+(Produtos.chocolate.getPreço()*choc)+(Produtos.refrigerante.getPreço()*ref)+(Produtos.suco.getPreço()*suco)+(Produtos.agua.getPreço()*agua);
         		System.out.println("-----------------------------------------------------------------------------");
         		break;
         		}
         		
         		else if(film == 2) {
-        			total= Compra.bilhete(f2, bil)+Compra.pipoca(pip)+ Compra.refrigerante(ref);
+        			total= Compra.bilhete(f2, bil)+(Produtos.pipoca.getPreço()*pip)+(Produtos.chocolate.getPreço()*choc)+(Produtos.refrigerante.getPreço()*ref)+(Produtos.suco.getPreço()*suco)+(Produtos.agua.getPreço()*agua);
         		System.out.println("-----------------------------------------------------------------------------");
         		break;
         		}
@@ -130,9 +166,22 @@ public class Main {
         	case "5":
         		System.out.println("compra encerrada");
         		System.out.println("custo= " + total);
+        		loop1++;
+        		System.out.println("-----------------------------------------------------------------------------");
+        		break;
+        		
+        	case "6":
+        		System.out.println("compra encerrada");
+        		System.out.println("custo= " + total);
+        		System.out.println("-----------------------------------------------------------------------------");
+        		System.out.println("progama encerrado");
+        		loop1++;
         		loop++;
         	
         	}
+        	
+           
         }
+}
 }
 }
