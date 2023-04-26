@@ -1,3 +1,6 @@
+package atividade1;
+
+
 public class Compra {
     private Usuario usuario;
 
@@ -18,17 +21,5 @@ public class Compra {
     	double total = valor*quantidade;
     	return total;
     }
-
-	public static double pipoca(int quantidade) {
-		double valor = 7.00;
-		double total = valor*quantidade;
-		return total;
-	}
-	
-    public static double refrigerante(int quantidade) {
-    	double valor = 5.00;
-    	double total = valor*quantidade;
-    	return total;
-	}
 	
 }
