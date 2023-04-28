@@ -1,4 +1,4 @@
-public class Critico extends usuario {
+public class Critico extends Usuario {
     private String origem;
     private String nome;
     private String mensagem;
@@ -36,10 +36,14 @@ public class Critico extends usuario {
         this.mensagem = mensagem;
     }
 
-    @Override
+    //@Override
+    //public double bilhete(Filme filme, int quantidade) {
+       // return 0.0;
+    //}
+    
     public double bilhete(Filme filme, int quantidade) {
-        return 0.0;
-    }
+    	return 0.0;
+	}
 }
 
 
