@@ -16,7 +16,7 @@ public class Compra {
         this.usuario = usuario;
     }
 
-	public static double bilhete(Filme filme, int quantidade) {
+	public static bilhete(Filme filme, int quantidade) {
     	double valor = filme.getValor();
     	double total = valor*quantidade;
     	return total;
