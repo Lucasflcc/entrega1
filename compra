@@ -16,12 +16,12 @@ public class Compra {
         this.usuario = usuario;
     }
 
-	public static double bilhete(Filme filme, int quantidade) {
+	public double bilhete(Filme filme, int quantidade) {
     	double valor = filme.getValor();
     	double total = valor*quantidade;
     	return total;
     }
-	public static double bilhete(Filme filme, int quantidade, CupomPromocional cupom) {
+	public double bilhete(Filme filme, int quantidade, CupomPromocional cupom) {
     double valor = filme.getValor();
     double total = valor * quantidade;
     if (cupom != null) {
