@@ -1,0 +1,16 @@
+package atividade1;
+
+public class Estudante extends Compra{
+
+	public Estudante(Usuario usuario) {
+		super(usuario);
+
+	}
+	
+	 public double bilhete(Filme filme, int quantidade) {
+		double valor = filme.getValor();
+    	double total = valor*quantidade*0.5;
+    	return total;
+	}
+	
+}
