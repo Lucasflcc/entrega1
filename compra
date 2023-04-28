@@ -21,5 +21,12 @@ public class Compra {
     	double total = valor*quantidade;
     	return total;
     }
-	
+	public static double bilhete(Filme filme, int quantidade, CupomPromocional cupom) {
+    double valor = filme.getValor();
+    double total = valor * quantidade;
+    if (cupom != null) {
+        total = total - (total * cupom.getDesconto());
+    }
+    return total;
+} // sobrecarga 
 }

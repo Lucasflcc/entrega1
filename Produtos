@@ -18,4 +18,12 @@ package atividade1;
 	 public double getPreço() {
 		 return preço;
 	 }
+
+	 public double compra(int quantidade, CupomPromocional cupom) {
+		double valorTotal = this.valor * quantidade;
+		if (cupom != null) {
+			valorTotal = valorTotal - (valorTotal * cupom.getDesconto());
+		}
+		return valorTotal;
+	}// sobrecarga
  }
