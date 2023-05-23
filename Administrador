@@ -1,0 +1,36 @@
+package atividade1;
+
+public class Administrador extends Base{
+	
+	private String ID;
+	private double salario;
+	
+	@Override
+	public void AddUser(String nome, int idade, String email) {
+	}
+
+	@Override
+	public void AlterUser(String nome, int idade, String email) {
+	}
+
+	public String getID() {
+		return ID;
+	}
+
+	public void setID(String iD) {
+		ID = iD;
+	}
+
+	public double getSalario() {
+		return salario;
+	}
+
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+	
+	public void ExcludeUser() {
+		
+	}
+	//adicionar interface
+}
