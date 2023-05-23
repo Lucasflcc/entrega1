@@ -1,0 +1,26 @@
+package atividade1;
+
+public class VendasException extends Exception{
+	public int bil;
+	public int linha;
+	public int coluna;
+	public double hora;
+	public String message;
+	
+	
+	public VendasException(int bil) {
+		this.bil = bil;
+		this.message = "BILHETES INSUFICIENTES!";
+	}
+	
+	public VendasException(int linha, int coluna) {
+		this.linha = linha;
+		this.coluna = coluna;
+		this.message = linha+" "+coluna+" "+"CADEIRA OCUPADA!";
+	}
+	
+	public VendasException(double hora) {
+		this.hora = hora;
+		this.message = "FILME JÁ COMEÇOU!";
+	}
+}
