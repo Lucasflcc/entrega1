@@ -5,12 +5,16 @@ import java.util.Scanner;
 public class Main {
 	 public static String exib[][]= new String[10][15];
 	 
+	 
 	 public static void exibir() {
 		 for(int t=0;t<10;t++)
      		System.out.println(exib[t][0] + " | " + exib[t][1] + " | " + exib[t][2] + " | " + exib[t][3] + " | " + exib[t][4] + " | " + exib[t][5] + " | " + exib[t][6] + " | " + exib[t][7] + " | " + exib[t][8] + " | " + exib[t][9] + " | " + exib[t][10] + " | " + exib[t][11] + " | " + exib[t][12] + " | " + exib[t][13] + " | " + exib[t][14]);
 	 }
 	 
     public static void main(String[] args) {
+    	double hora = 12.00;
+    	int bil = 0;
+    	int bilO = 0;
         //Usuario u = new Usuario("usuario", "cpf", "senha", 34, "sexo", "usuario@mail.com", "cartao", "numcartao", "codcartao");
         Filme f = new Filme("nome", 2, "sinopse", 10.00);
         Filme f2 = new Filme("name", 3, "sinopsis", 20.00);
@@ -67,7 +71,7 @@ public class Main {
         		System.out.println("filme");
         		int film = input.nextInt();
         		System.out.println("bilhetes");
-        		int bil = input.nextInt();
+        		bil = input.nextInt();
         		System.out.println("pipoca");
         		int pip = input.nextInt();
         		System.out.println("chocolate");
@@ -143,11 +147,38 @@ public class Main {
         		System.out.println("digite a coluna da cadeira desejada");
         		int c2 = input.nextInt();
         		
-        		if(choice2==1)
+        		if(choice2==1) {
         		se.reservarCadeira(l2, c2);
+        		  if(se.reservarCadeira(l2, c2)==false) {
+        			VendasException e = new VendasException(l2, c2);
+        			System.out.println(e.message);
+        		}
+        		  else if(bilO >= bil) {
+        			  VendasException e = new VendasException(bil);
+        			  System.out.println(e.message);
+        		  }
+        		  
+        		  else {
+        			  bilO++;
+        		  }
+        		}
         		
-        		else if(choice2==2)
+        		else if(choice2==2) {
         		se2.reservarCadeira(l2, c2);
+        		  if(se.reservarCadeira(l2, c2)==false) {
+        			VendasException e = new VendasException(l2, c2);
+        			System.out.println(e.message);
+        		}
+        		  
+        		  else if(bilO >= bil) {
+        			  VendasException e = new VendasException(bil);
+        			  System.out.println(e.message);
+        		  }
+        		  
+        		  else {
+        			  bilO++;
+        		  }
+        		}
         		
         		System.out.println("digite 0 para concluir processo e 1 para continuar selecionando cadeiras");
         		int escolha2 = input.nextInt();
