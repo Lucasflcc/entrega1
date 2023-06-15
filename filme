@@ -1,15 +1,23 @@
+package atividade1;
+
 public class Filme {
     private String nome;
     private int duracao;
     private String sinopse;
     private double valor;
+    private double notas;
+    private double nota;
+    private int quant_crit;
     
     // Construtor
-    public Filme(String nome, int duracao, String sinopse, double valor) {
+    public Filme(String nome, int duracao, String sinopse, double valor, double notas, double nota, int quant_crit) {
         this.nome = nome;
         this.duracao = duracao;
         this.sinopse = sinopse;
         this.valor = valor;
+        this.notas = notas;
+        this.nota = nota;
+        this.quant_crit = quant_crit;
     }
     
     // Métodos getters e setters para todos os atributos
@@ -44,4 +52,29 @@ public class Filme {
     public void setValor(double valor) {
         this.valor = valor;
     }
+    
+    public double getNotas() {
+    	return notas;
+    }
+    
+    public void setNotas(double notas) {
+    	this.notas = notas;
+    }
+    
+    public double getNota() {
+    	return nota;
+    }
+    
+    public void setNota(double nota) {
+    	this.nota = nota;
+    }
+    
+    public int getQuant_crit() {
+    	return quant_crit;
+    } 
+    
+    public void setQuant_crit(int quant_crit) {
+	    this.quant_crit = quant_crit;
+    }
+  
 }
