@@ -5,6 +5,11 @@ public class Administrador extends Base{
 	private String ID;
 	private double salario;
 	
+	
+	public Administrador(String name, int age, String mail) {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	public void AddUser(String nome, int idade, String email) {
 	}
