@@ -3,6 +3,11 @@ package atividade1;
 public class Funcionario extends Base{
 	
 	private double salario;
+	
+
+	public Funcionario(String nome, int idade, String email) {
+		// TODO Auto-generated constructor stub
+	}
 
 	public double getSalario() {
 		return salario;
