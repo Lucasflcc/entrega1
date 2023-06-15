@@ -1,3 +1,5 @@
+package atividade1;
+
 import java.util.List;
 
 public class Sessao {
@@ -22,6 +24,15 @@ public class Sessao {
             return false;
         } else {
             cadeiras[linha][coluna] = true; // marca a cadeira como ocupada
+            return true;
+        }
+    }
+    
+    public boolean checarCadeira(int linha, int coluna) {
+        if (cadeiras[linha][coluna] == true) { // se a cadeira estiver ocupada, não pode ser reservada
+            return false;
+        } else {
+             // marca a cadeira como ocupada
             return true;
         }
     }
