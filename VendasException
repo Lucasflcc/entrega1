@@ -24,3 +24,4 @@ public class VendasException extends Exception{
 		this.message = "FILME JÁ COMEÇOU!";
 	}
 }
+
