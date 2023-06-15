@@ -1,0 +1,17 @@
+package atividade1;
+
+public class Critica{
+	private String origem;
+    private String nome;
+    private String mensagem;
+    
+
+    
+    public void atribuirNota() {
+    	
+    }
+    
+    public void atribuirCritica() {
+    	
+    }
+}
